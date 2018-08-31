@@ -1,0 +1,16 @@
+execution:
+- concurrency: 1000
+  hold-for: 10m
+  ramp-up: 120s
+  scenario: Thread Group
+scenarios:
+  Thread Group:
+    requests:
+    - label: apps_list
+      method: GET
+      url: https://api.geospark.co/api/v1/apps/
+      headers:
+        Authorization: token ed158425a218971ce1fa6a683776ff25f8e49daa
+modules:
+  blazemeter:
+      token: e597ac435960c8ae1878bcfc:69e030af8e62fbbd5fcc7338193257debd334b297143c1c9547eaaf5535bb7bda4a15db1
